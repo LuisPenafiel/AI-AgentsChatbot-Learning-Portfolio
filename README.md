@@ -13,7 +13,24 @@ Learning project to build a personal AI assistant integrating chatbots, AI agent
   4. Run the chatbot: `streamlit run app.py`
   5. Open the link in your browser and test prompts.
 
-## Roadmap (Simplified for Juniors)
+## Phase 2: Adding Autonomy with Agents (Completed)
+
+- **Description**: Enhanced the chatbot with AI agents for autonomy, allowing tasks like web search and summarization. Agents use tools to "think" and act on complex queries.
+- **Tech Stack**: Added LangChain for agents and tools, DuckDuckGo for web search.
+- **How to Run Locally**:
+
+ 1.Run python llm_simple.py for a console test (searches and summarizes).
+ 2.In app.py, the chatbot now uses agents – test with prompts like "Search and summarize AI tips for juniors."
+ Notes: Agents show "thinking" steps in the terminal (verbose=True for debugging). Simple and extensible for more tools.
+
+
+## Phase 3: Basic DevOps (Completed)
+
+- Git branches for features.
+- CI with GitHub Actions for auto-tests.
+- How to test: Push to main, check Actions tab.
+
+## Roadmap 
 - Phase 1: Basic chatbot (done).
 - Phase 2: Add agents (autonomy with tools like web search).
 - Phase 3: Basic DevOps (GitHub Actions, optional Docker).
