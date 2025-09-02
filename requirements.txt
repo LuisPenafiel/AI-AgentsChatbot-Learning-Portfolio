@@ -1,2 +1,6 @@
 streamlit==1.49.1  # Interfaz web
 llama-cpp-python==0.2.89  # run TinyLlama local
+langchain==0.3.27  # For agents
+langchain-community==0.3.29  # For tools
+duckduckgo-search==6.3.1  # Free web search tool
+ddgs==9.5.5

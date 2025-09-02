@@ -1,6 +1,6 @@
-# Ignorar entornos virtuales
+# Ignore venv and models to save space
 venv/
-.env
+models/
 __pycache__/
 *.pyc
-models
+.env
