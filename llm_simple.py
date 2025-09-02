@@ -1,9 +1,8 @@
-from langchain_openai import ChatOpenAI
-from dotenv import load_dotenv
+from llama_cpp import Llama
 
-load_dotenv()
-llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.7)
+# Load the model
+llm = Llama(model_path="models/tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf", n_ctx=2048, n_threads=1)
 
-prompt = "Dame 3 consejos para aprender IA."
-response = llm.invoke(prompt)
-print(response.content)
+prompt = "Give me 3 tips to learn AI as a junior."
+response = llm(prompt, max_tokens=500, temperature=0.7)
+print("Response:", response["choices"][0]["text"])

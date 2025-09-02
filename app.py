@@ -1,23 +1,14 @@
 import streamlit as st
-from langchain_openai import ChatOpenAI
-from langchain.chains import ConversationChain
-from langchain.memory import ConversationBufferMemory
-from dotenv import load_dotenv
+from llama_cpp import Llama
 
-load_dotenv()
-llm = ChatOpenAI(model="gpt-3.5-turbo")
+# Load the model
+llm = Llama(model_path="models/tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf", n_ctx=2048, n_threads=1)
 
-# Memoria para contexto
-if "memory" not in st.session_state:
-    st.session_state.memory = ConversationBufferMemory()
+st.title("Basic AI Assistant")
 
-chain = ConversationChain(llm=llm, memory=st.session_state.memory)
-
-st.title("Asistente Personal AI - Versión 1.0")
-
-# Input usuario
-user_input = st.text_input("Escribe tu mensaje:")
-if st.button("Enviar"):
+# User input
+user_input = st.text_input("Enter your message:")
+if st.button("Send"):
     if user_input:
-        response = chain.run(user_input)
-        st.write("Asistente:", response)
+        response = llm(user_input, max_tokens=500, temperature=0.7)
+        st.write("Assistant:", response["choices"][0]["text"])

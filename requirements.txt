@@ -1,0 +1,2 @@
+streamlit==1.49.1  # Interfaz web
+llama-cpp-python==0.2.89  # run TinyLlama local
