@@ -30,11 +30,21 @@ Learning project to build a personal AI assistant integrating chatbots, AI agent
 - CI with GitHub Actions for auto-tests.
 - How to test: Push to main, check Actions tab.
 
+## Phase 4: Automation and Monitoring (Completed)
+- **Description:** Added workflow automation with n8n (low-code flows for chatbot integration) and monitoring with Grafana (dashboards for metrics/logs, e.g., response time, CPU).
+- **Tech Stack:** n8n for workflows, Grafana for observability.
+- **How to Run Locally:**
+  1. Install n8n: `npm install -g n8n` (need Node.js: `sudo apt install nodejs npm`).
+  2. Start n8n: `n8n start` (browser: http://localhost:5678).
+  3. Install Grafana: Download binary from grafana.com, run `./bin/grafana-server` (browser: http://localhost:3000).
+  4. Example workflow in n8n: Monitor app.py logs, send email alert if error.
+- **Notes:** n8n integrates chatbot with external services (e.g., notifications), Grafana shows performance. Local to avoid costs/cloud.
+
 ## Roadmap 
 - Phase 1: Basic chatbot (done).
 - Phase 2: Add agents (autonomy with tools like web search).
 - Phase 3: Basic DevOps (GitHub Actions, optional Docker).
-- Phase 4: Cloud deployment on AWS (free tier).
+- Phase 4: n8n for workflows, Grafana for observability
 - Tips: Start small, test locally first, use print() for debugging. If space is low in Codespaces, avoid heavy packages.
 
 ## Installation and Debug
