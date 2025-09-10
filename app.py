@@ -3,6 +3,14 @@ from langchain_community.llms import LlamaCpp
 from langchain.memory import ConversationBufferMemory
 from langchain.agents import initialize_agent, Tool
 from langchain_community.tools import DuckDuckGoSearchRun
+import logging
+
+# Configura los logs simples
+logging.basicConfig(filename='app.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# Ejemplo: Agrega logs en tu código
+logging.info("Iniciando el chatbot...")  # Esto se escribe cuando corre
+# En lugares donde pueda haber errores, pon: logging.error("Ocurrió un error: " + str(e))
 
 # Load the model with LangChain wrapper
 llm = LlamaCpp(
