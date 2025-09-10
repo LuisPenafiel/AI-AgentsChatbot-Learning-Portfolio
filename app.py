@@ -11,11 +11,11 @@ logging.basicConfig(filename='app.log', level=logging.INFO, format='%(asctime)s 
 # Ejemplo: Agrega logs en tu código
 logging.info("Iniciando el chatbot...")  # Esto se escribe cuando corre
 
-# *** TEMPORAL: Forza un error para probar. BORRA ESTA LÍNEA DESPUÉS DE PROBAR ***
-raise Exception("Error de prueba para chequear logs y n8n")
-
 # En lugares donde pueda haber errores, como cargar el modelo o inicializar el agente
 try:
+    # *** TEMPORAL: Forza un error para probar. BORRA ESTA LÍNEA DESPUÉS DE PROBAR ***
+    raise Exception("Error de prueba para chequear logs y n8n")
+
     # Load the model with LangChain wrapper
     llm = LlamaCpp(
         model_path="models/tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf",
