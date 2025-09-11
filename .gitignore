@@ -1,6 +1,35 @@
-# Ignore venv and models to save space
+# Python
 venv/
-models/
-__pycache__/
 *.pyc
-.env
+__pycache__/
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Logs y temporales
+app.log
+*.log
+/tmp/
+
+# Modelos y archivos grandes
+models/
+grafana-*
+loki-*
+promtail-*
+*.tar.gz
+*.zip
+
+# Configuraciones sensibles
+*.yaml  # Incluye promtail-config.yaml (guarda token)
+*.json  # Dashboards o configs sensibles
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore  # Evita subir este archivo (opcional)

@@ -13,7 +13,8 @@ logging.info("Iniciando el chatbot...")  # Esto se escribe cuando corre
 
 # En lugares donde pueda haber errores, como cargar el modelo o inicializar el agente
 try:
-    
+    # *** TEMPORAL: Forza un error para probar. BORRA ESTA LÍNEA DESPUÉS DE PROBAR ***
+    raise Exception("Error de prueba para Grafana")
 
     # Load the model with LangChain wrapper
     llm = LlamaCpp(

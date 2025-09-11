@@ -1,1 +1,7 @@
 source venv/bin/activate
+
+n8n start
+
+
+
+./promtail-linux-amd64 -config.file=promtail-config.yaml # start grafana promtail
